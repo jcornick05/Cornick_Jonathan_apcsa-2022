@@ -30,7 +30,7 @@ public class MPHRunner
 		test.print();
 		
 		//add more test cases
-		
+		//all cases were tested
 		
 	}
 }

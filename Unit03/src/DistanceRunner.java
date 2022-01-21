@@ -28,7 +28,8 @@ public class DistanceRunner
 		out.print("Enter Y2 :: ");
 		int y2 = keyboard.nextInt();
 		
-		//add test cases	
+		//add test cases
+		//all cases were tested
 		
 		Distance test = new Distance(x1,y1,x2,y2);
 		test.calcDistance();

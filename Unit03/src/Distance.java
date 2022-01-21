@@ -34,7 +34,10 @@ public class Distance
 
 	public void calcDistance()
 	{
-		distance = 0;
+		int top = yTwo - yOne;
+		int bottom = xTwo - xOne;
+		distance = Math.sqrt((bottom*bottom)+(top*top));
+		
 	}
 	
 	public double getDistance()
