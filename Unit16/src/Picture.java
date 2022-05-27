@@ -91,18 +91,22 @@ public class Picture extends SimplePicture {
 		Pixel[][] currPixels = this.getPixels2D();
 		Pixel currPixel = null;
 		Pixel pixel = null;
+
 		for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
 				currPixel = currPixels[row][col];
 				pixel = messagePixels[row][col];
 
 				if (pixel.getRed() + pixel.getGreen() < 400) {
+					// determines if pixel is black
+
 					if (currPixel.getRed() % 2 == 0) {
 						currPixel.setRed(currPixel.getRed() + 1);
 					}
 					if (currPixel.getGreen() % 2 == 0) {
 						currPixel.setGreen(currPixel.getGreen() + 1);
 					}
+					// checks if red and green are odd
 				} else {
 					if (currPixel.getRed() % 2 != 0) {
 						currPixel.setRed(currPixel.getRed() + 1);
@@ -110,6 +114,8 @@ public class Picture extends SimplePicture {
 					if (currPixel.getGreen() % 2 != 0) {
 						currPixel.setGreen(currPixel.getGreen() + 1);
 					}
+
+					// checks if red and green are even
 				}
 			}
 		}
@@ -129,12 +135,15 @@ public class Picture extends SimplePicture {
 
 		for (int row = 0; row < this.getHeight(); row++) {
 			for (int col = 0; col < this.getWidth(); col++) {
+				// iterates through all pixels
+
 				currPixel = pixels[row][col];
 				pixel = messagePixels[row][col];
 
 				if ((currPixel.getRed() % 2 != 0 && currPixel.getGreen() % 2 != 0)) {
 					pixel.setColor(Color.BLACK);
 				}
+				// if current pixel has an odd red and green value, it will set it to black
 
 			}
 		}
